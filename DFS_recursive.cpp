@@ -1,3 +1,7 @@
+/*
+	Author --> Faheem khan
+	Depth First Search Code .
+*/
 // # include <bits/stdc++.h>
 # include <iostream>
 # include <vector>  
@@ -30,7 +34,7 @@ void dfs(int v){
 	}
 }
 
-int main(){
+signed main(){
 	int n,m ; cin >> n >> m ; // no of node and no of edges 
 	for(int i = 0 ;i < m;i++){
 		int u,v ;
@@ -41,15 +45,10 @@ int main(){
 	int cnt = 0 ;
 	for(int i = 1 ;i <= n;i++){
 		if(!seen[i]){
-			cout << "nei = " ;
 			dfs(i) ;
-			cout << endl;;
 			cnt ++ ;
 		}
 	}
 	cout << "connected components = "<<  cnt << endl ;
 }
 // Time Complexity: O(V+E)
-
-
-// 
